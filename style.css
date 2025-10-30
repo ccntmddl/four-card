@@ -1,3 +1,220 @@
-body{
-    background-color: #FAFAFA;
+body {
+    background-color: var(--white);
+}
+
+/* стилі для кожного проекта які обнулюють непотрібне або налаштовують необхідне */
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+hr,
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 400;
+}
+
+ul,
+ol {
+    margin: 0;
+    /* padding-left: 0; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s ease-in-out;
+}
+
+/* кінець стилів для кожного проекта */
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --grey-500: #4c4e61;
+    --grey-400: #697077;
+    --white: hsl(0, 0%, 100%);
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-weight: 300;
+}
+
+.poppins-regular {
+    font-weight: 400;
+}
+
+.poppins-semibold {
+    font-weight: 600;
+}
+
+section {
+    /* padding-top: 80px;
+    padding-bottom: 80px; */
+    padding-block: 80px;
+
+    h2 {
+        /* font-weight: 300; */
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: var(--grey-400);
+        margin-bottom: 2px;
+
+    }
+
+    h3 {
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: var(--grey-400);
+        margin-bottom: 13px;
+    }
+
+    &>p {
+        width: 540px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        color: var(--grey-500);
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        margin-bottom: 64px;
+
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+
+    .flx {
+        display: flex;
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards {
+        column-gap: 30px;
+        align-items: center;
+
+        article:first-child {
+            border-top-color: var(--cyan);
+        }
+
+        article:last-child {
+            border-top-color: var(--blue);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+
+            article:first-child {
+                border-top-color: var(--red);
+            }
+
+            article:last-child {
+                border-top-color: var(--orange);
+            }
+        }
+    }
+
+    article {
+        width: 350px;
+        height: 250px;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+        border-radius: 8px;
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+        border-top: 4px solid #000;
+
+        h4 {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: var(--grey-500);
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 23px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        img {
+            margin-left: auto;
+            display: block;
+        }
+    }
+
+    article::before {
+        /* content: '33'; */
+        /* content: "";
+        width: 350px;
+        height: 4px;
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; */
+    }
+}
+
+@media(max-width:1180px) {
+    section {
+
+        /* background-color: #5c6caf; */
+        h2,
+        h3 {
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.17px;
+
+
+
+        }
+
+        /* h3 {
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.17px;
+
+        } */
+        &>p {
+            width: 311px;
+        }
+
+        .cards {
+            flex-direction: column;
+            row-gap: 30px;
+
+        }
+    }
 }
